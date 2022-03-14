@@ -6,6 +6,7 @@
 ----GET /
 ----PUT /avatar🔐{avatar_url}
 ----PUT /nickname🔐{nickname}
+----POST /follow🔐{username}
 --tweets
 ----GET / (if not loged - return the tweets og the most populars user)
 ----POST / 🔐{text}
