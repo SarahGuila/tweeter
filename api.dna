@@ -1,0 +1,16 @@
+--auth
+----POST /login { username, password}
+----POST /register{username, password, nickname, avatar_url}
+----DELETE /logout 🔐
+--profile
+----GET /
+----PUT /avatar🔐{avatar_url}
+----PUT /nickname🔐{nickname}
+--tweets
+----GET / (if not loged - return the tweets og the most populars user)
+----POST / 🔐{text}
+--comments
+----GET /:tweet_id
+----POST /:tweet_id🔐{user_id, text }
+--likes
+----POST / 🔐 {user_id, tweet_id}
