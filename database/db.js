@@ -10,6 +10,7 @@ module.exports.db = [
         tweets: [
             {
                 id: v4(),
+                author: "Jo",
                 text: "Hello this is my first tweet!",
                 published: new Date(),
                 likes: ["Johana", "Michal"],
@@ -22,6 +23,7 @@ module.exports.db = [
             },
             {
                 id: v4(),
+                author: "Jo",
                 text: "Hello this is my second tweet!",
                 published: new Date(),
                 likes: ["Jenny"],
@@ -42,6 +44,7 @@ module.exports.db = [
         tweets: [
             {
                 id: v4(),
+                author:"Johana",
                 text: "Hello everybody!",
                 published: new Date(),
                 likes: ["Jo"],
@@ -54,6 +57,7 @@ module.exports.db = [
             },
             {
                 id: v4(),
+                author:"Johana",
                 text: "Hello everbody again!",
                 published: new Date(),
                 likes: ["Jenny"],

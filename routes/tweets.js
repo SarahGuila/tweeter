@@ -27,6 +27,7 @@ router.post('/', onlyLogged, (req, res) => {
     const user = db.find(ur => ur.username == req.user.username)
     user.tweets.push({
         id: v4(),
+        author: req.user.username,
         text,
         comments:[],
         likes:[],
