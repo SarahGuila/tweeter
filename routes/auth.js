@@ -52,8 +52,8 @@ router.post('/login', async (req, res) => {
         res.status(401).send({ msg: 'Wrong password!' })
     }
     //creat tokens
-    const accessToken = jsonwebtoken.sign({ username, nick: user.nickname }, "Secret", { expiresIn: '5m' })
-    const refreshToken = jsonwebtoken.sign({ username, nick: user.nickname }, "OtherSecret", { expiresIn: '100d' })
+    const accessToken = jsonwebtoken.sign({ username, nick: user.nickname }, process.env.ACCESS_TOKEN, { expiresIn: '5m' })
+    const refreshToken = jsonwebtoken.sign({ username, nick: user.nickname }, process.env.REFRESH_TOKEN, { expiresIn: '100d' })
     
     //save the refresh token in the valut(db of refresh tokens)
     refreshes[username] = refreshToken
