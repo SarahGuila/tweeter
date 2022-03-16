@@ -8,6 +8,7 @@ module.exports.everyone = function(req, res, next){
         } else {
             req.user = false
         }
+        next()
     } catch (error) {
         console.log(error)
         res.sendStatus(500)
