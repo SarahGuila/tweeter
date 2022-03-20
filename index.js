@@ -1,9 +1,12 @@
 //imports
 const express = require('express')
 const cookieParser = require('cookie-parser')
+const dotenv = require('dotenv')
+
 
 //inits
 const app = express()
+dotenv.config()
 
 //middleware 
 app.use(express.json())
